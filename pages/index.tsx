@@ -1,17 +1,32 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
     <div className='py-12 flex flex-col items-center gap-12 bg-slate-50'>
+      <Head>
+        <title>JsonBlogs - How to install any version of Node JS on Windows 7</title>
+        <meta name="description" content="Free tutorial to install any version of Node JS even not supported
+        as LTS v16.17.0 on Windows 7 32 and 64 bits in only 3 steps" />
+        <meta name="robots" content="all" />
+        <meta name="google" content="nositelinksearchbox" />
+        <meta name="og:description" content="Free tutorial to install any version of Node JS even not supported
+        as LTS v16.17.0 on Windows 7 32 and 64 bits in only 3 steps" />
+        <link rel="canonical" href="https://json-blogs.vercel.app/" key="canonical" />
+      </Head>
       <header className='flex flex-col gap-2 items-center'>
         <h2 className='text-3xl'>Json Blog</h2>
         <h1 className='font-medium drop-shadow-sm shadow-white'>
           How to install any version of Node JS on Windows 7
         </h1>
-        <a href='#main' className='absolute right-4 top-4 p-2 font-medium text-white
+        <Link href='#main'>
+          <a className='absolute right-4 top-4 p-2 font-medium text-white
           rounded-md bg-blue-600 hover:bg-blue-700 transition-colors'>
-          Get Started!
-        </a>
+            Get Started!
+          </a>
+        </Link>
+
       </header>
       <section className='w-[43ch] flex flex-col gap-8'>
         <h2 className='text-lg font-medium text-center'>
@@ -29,9 +44,9 @@ const Home: NextPage = () => {
             Which versions of are supported on Windows 7?
           </h3>
           <p>Officially the latest version supported on Windows 7
-            is <a href="https://nodejs.org/download/release/v13.6.0/" className='text-blue-800'>13.6.0</a>
-            , but it is possible to install the <a href="https://nodejs.org/download/release/v13.14.0/" className='text-blue-800'>
-              13.14.0</a> as ordinary without an error.
+            is <Link href="https://nodejs.org/download/release/v13.6.0/"><a className='text-blue-800'>
+              13.6.0</a></Link>, but it is possible to install the <Link href="https://nodejs.org/download/release/v13.14.0/">
+              <a className='text-blue-800'>13.14.0</a></Link>as ordinary without an error.
           </p>
         </article>
       </section>
@@ -48,12 +63,10 @@ const Home: NextPage = () => {
               perfectly supported on Windows 7 like it is the v13.14.0:
             </p>
             <ul className='mt-2 flex flex-col gap-2'>
-              <li><a href="https://nodejs.org/download/release/v13.14.0/node-v13.14.0-x64.msi" className='text-blue-800'>
-                v13.14.0.msi 64bits
-              </a></li>
-              <li><a href="https://nodejs.org/download/release/v13.14.0/node-v13.14.0-x64.msi" className='text-blue-800'>
-                v13.14.0.msi 32bits
-              </a></li>
+              <li><Link href="https://nodejs.org/download/release/v13.14.0/node-v13.14.0-x64.msi">
+                <a className='text-blue-800'>v13.14.0.msi 64bits</a></Link></li>
+              <li><Link href="https://nodejs.org/download/release/v13.14.0/node-v13.14.0-x64.msi">
+                <a className='text-blue-800'>v13.14.0.msi 32bits</a></Link></li>
             </ul>
           </li>
           <li>
@@ -61,19 +74,17 @@ const Home: NextPage = () => {
               Step 2 - Replace its files with the files of a .zip newer version
             </h3>
             <p>Now comes the funniest part of this: In some sites you could find that even with tricks it is
-              impossible to get upper than <a href="https://nodejs.org/download/release/v14.16.1/" className='text-blue-800'>
-                v14.16.1</a> or <a href="https://nodejs.org/download/release/v15.8.0/" className='text-blue-800'>
-                v15.8.0</a>, but i tried with the latest LTS version of Node JS that is now v16.17.0 on my Windows 7
-              64 bits and it worked to me very well. It seems like you&apos;ll be able to install whatever
-              version you want! But there&apos;s only a thing: pick it up in .zip format.
+              impossible to get upper than <Link href="https://nodejs.org/download/release/v14.16.1/">
+                <a className='text-blue-800'>v14.16.1</a></Link> or <Link href="https://nodejs.org/download/release/v15.8.0/">
+                <a className='text-blue-800'>v15.8.0</a></Link>, but i tried with the latest LTS version of Node JS
+              that is now v16.17.0 on my Windows 7 64 bits and it worked to me very well. It seems like you&apos;ll
+              be able to install whatever version you want! But there&apos;s only a thing: pick it up in .zip format.
             </p>
             <ul className='my-2 flex flex-col gap-2'>
-              <li><a href="https://nodejs.org/dist/v16.17.0/node-v16.17.0-win-x64.zip" className='text-blue-800'>
-                v16.17.0.zip 64bits
-              </a></li>
-              <li><a href="https://nodejs.org/dist/v16.17.0/node-v16.17.0-win-x86.zip" className='text-blue-800'>
-                v16.17.0.zip 32bits
-              </a></li>
+              <li><Link href="https://nodejs.org/dist/v16.17.0/node-v16.17.0-win-x64.zip">
+                <a className='text-blue-800'>v16.17.0.zip 64bits</a></Link></li>
+              <li><Link href="https://nodejs.org/dist/v16.17.0/node-v16.17.0-win-x86.zip">
+                <a className='text-blue-800'>v16.17.0.zip 32bits</a></Link></li>
             </ul>
             <p>When you get your version&apos;s binary, then put its contents into the Node JS installation and
               replace everything folder that usually is allocated in your program files directory: it is <i>
