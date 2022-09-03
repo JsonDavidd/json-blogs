@@ -46,7 +46,7 @@ const Home: NextPage = () => {
           <p>Officially the latest version supported on Windows 7
             is <Link href="https://nodejs.org/download/release/v13.6.0/"><a className='text-blue-800'>
               13.6.0</a></Link>, but it is possible to install the <Link href="https://nodejs.org/download/release/v13.14.0/">
-              <a className='text-blue-800'>13.14.0</a></Link>as ordinary without an error.
+              <a className='text-blue-800'>13.14.0</a></Link> as ordinary without an error.
           </p>
         </article>
       </section>
