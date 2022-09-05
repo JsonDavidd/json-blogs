@@ -1,8 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useState } from 'react'
+import ContactForm from '../components/contact-form'
+import { IoMdClose } from 'react-icons/io'
 
 const Home: NextPage = () => {
+  const [contactFormOpened, setContactFormOpened] = useState(false)
+  const [contactFormSent, setContactFormSent] = useState(false)
+
   return (
     <div className='py-12 flex flex-col items-center gap-12 bg-slate-50'>
       <Head>
@@ -128,6 +134,24 @@ const Home: NextPage = () => {
           </p>
         </article>
       </section>
+      <footer className='w-[43ch] flex justify-center'>
+        <button onClick={() => setContactFormOpened(true)} className={contactFormSent ? 'hidden'
+          : `p-2 font-medium text-white rounded-md bg-blue-600 hover:bg-blue-700 transition-colors`}>
+          Contact me
+        </button>
+
+        <div className={contactFormSent ? ''
+          : contactFormOpened ? `fixed left-0 top-0 w-full h-screen flex items-center justify-center bg-neutral-800/25`
+            : 'hidden'}>
+          <button onClick={() => setContactFormOpened(false)} className='absolute left-6 top-4'>
+            <IoMdClose size={'2ch'} />
+          </button>
+          <div className={contactFormSent ? '' : `px-4 py-6 w-[43ch] bg-white rounded-lg shadow-sm 
+          shadow-neutral-700`}>
+            <ContactForm sentCallback={() => setContactFormSent(true)} />
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
